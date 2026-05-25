@@ -103,7 +103,7 @@ def load_and_preprocess_raw_data(filepath, target_col='CO(GT)'):
     """
     try:
         # AirQualityUCI thường dùng ';' làm phân cách và ',' làm dấu thập phân
-        df = pd.read_csv(filepath, sep=';', decimal=',')
+        df = pd.read_csv(filepath, sep=',', decimal=',')
     except FileNotFoundError:
         print(f"Lỗi: Không tìm thấy file {filepath}")
         return None, None
